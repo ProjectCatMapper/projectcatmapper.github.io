@@ -17,6 +17,27 @@
   <meta name="twitter:image" content="https://projectcatmapper.github.io/assets/catmapper-logo.webp">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/catmapper-logo.webp" type="image/webp">
+  <noscript>
+    <style>
+      @media (max-width: 840px) {
+        .nav-toggle {
+          display: none !important;
+        }
+        .site-nav {
+          position: static !important;
+          display: flex !important;
+          min-width: 0 !important;
+          border: 0 !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          background: transparent !important;
+          flex-direction: row !important;
+          flex-wrap: wrap !important;
+          gap: 8px !important;
+        }
+      }
+    </style>
+  </noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -158,8 +179,8 @@ remotes::install_github("ProjectCatMapper/CatMapR")</code></pre>
       <p>ProjectCatMapper is maintained by contributors across CatMapper repositories.</p>
       <ul class="compact-list">
         <li><a href="https://github.com/ProjectCatMapper" data-outbound="org">ProjectCatMapper Organization</a></li>
-        <li><a href="https://github.com/ProjectCatMapper/CatMapperAPI" data-outbound="api-repo">CatMapperAPI Repository</a></li>
-        <li><a href="https://github.com/ProjectCatMapper/CatMapperJS" data-outbound="js-repo">CatMapperJS Repository</a></li>
+        <li><a href="https://api.catmapper.org/docs" data-outbound="api-public">CatMapper API Documentation</a></li>
+        <li><a href="https://catmapper.org" data-outbound="web-public">CatMapper Web Application</a></li>
         <li><a href="https://github.com/ProjectCatMapper/CatMapR" data-outbound="r-repo">CatMapR Repository</a></li>
       </ul>
     </section>
@@ -169,7 +190,7 @@ remotes::install_github("ProjectCatMapper/CatMapR")</code></pre>
       <p>Issues and pull requests are welcome.</p>
       <div class="inline-links">
         <a class="btn" href="https://github.com/ProjectCatMapper/projectcatmapper.github.io/issues/new/choose" data-outbound="issues">Open an Issue</a>
-        <a class="btn btn-ghost" href="https://github.com/ProjectCatMapper/projectcatmapper.github.io/pulls" data-outbound="prs">Open a Pull Request</a>
+        <a class="btn btn-ghost" href="https://github.com/ProjectCatMapper/projectcatmapper.github.io/compare" data-outbound="prs">Open a Pull Request</a>
       </div>
       <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for workflow details and setup links.</p>
     </section>
