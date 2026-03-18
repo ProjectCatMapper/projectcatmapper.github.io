@@ -192,8 +192,30 @@ main {
   height: auto;
 }
 .hex-logo {
-  width: 120px;
+  width: 64px;
   height: auto;
+  margin-bottom: 4px;
+}
+
+.ecosystem-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 6px 0 10px;
+}
+
+.ecosystem-logo {
+  height: 28px;
+  width: auto;
+}
+
+.ecosystem-logo-catmapper {
+  height: 24px;
+}
+
+.ecosystem-logo-wide {
+  height: 30px;
 }
 
 .btn {
