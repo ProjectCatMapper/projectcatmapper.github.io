@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProjectCatMapper Docs Hub</title>
+  <meta name="description" content="Central docs hub for CatMapper, SocioMap, ArchaMap, API resources, and the CatMapR package.">
+  <link rel="canonical" href="https://projectcatmapper.github.io/">
+  <meta property="og:title" content="ProjectCatMapper Docs Hub">
+  <meta property="og:description" content="Find CatMapper apps, API docs, and CatMapR package resources in one place.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://projectcatmapper.github.io/">
+  <meta property="og:image" content="https://projectcatmapper.github.io/assets/catmapper-logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ProjectCatMapper Docs Hub">
+  <meta name="twitter:description" content="Find CatMapper apps, API docs, and CatMapR package resources in one place.">
+  <meta name="twitter:image" content="https://projectcatmapper.github.io/assets/catmapper-logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/catmapper-logo.webp" type="image/webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ProjectCatMapper",
+    "url": "https://projectcatmapper.github.io/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ProjectCatMapper"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#start-here">Skip to main content</a>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <img src="assets/catmapper-logo.webp" alt="CatMapper logo" class="brand-logo">
+      <div class="brand-text">
+        <p class="kicker">ProjectCatMapper</p>
+        <h1>Documentation Hub</h1>
+      </div>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#overview">Overview</a>
+      <a href="#apps">Apps</a>
+      <a href="#api">API</a>
+      <a href="#catmapr">CatMapR</a>
+      <a href="#contribute">Contribute</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview" class="hero">
+      <p class="eyebrow">Start Here</p>
+      <h2>Find CatMapper tools and docs in one place</h2>
+      <p>
+        CatMapper organizes and harmonizes category systems across datasets. It includes two web applications:
+        SocioMap (social-science categories) and ArchaMap (archaeological categories), plus a public API and
+        an R wrapper package (CatMapR).
+      </p>
+      <div id="start-here" class="start-grid" aria-label="Start here actions">
+        <a class="start-card" href="#apps">
+          <span>1.</span>
+          <strong>Choose an app</strong>
+          <small>SocioMap or ArchaMap</small>
+        </a>
+        <a class="start-card" href="#api">
+          <span>2.</span>
+          <strong>Use the API</strong>
+          <small>Browse endpoints and docs</small>
+        </a>
+        <a class="start-card" href="#catmapr">
+          <span>3.</span>
+          <strong>Work in R</strong>
+          <small>Install CatMapR and follow vignettes</small>
+        </a>
+      </div>
+    </section>
+
+    <section id="apps" class="section">
+      <h2>Apps</h2>
+      <div class="cards apps-grid">
+        <article class="card">
+          <img src="assets/sociomap-logo.webp" alt="SocioMap logo" class="app-logo">
+          <h3>SocioMap</h3>
+          <p>Supports social-science category systems such as ethnicities, languages, religions, and administrative units.</p>
+          <a class="btn" href="https://catmapper.org/sociomap" data-outbound="sociomap">Open SocioMap</a>
+        </article>
+        <article class="card">
+          <img src="assets/archamap-logo.webp" alt="ArchaMap logo" class="app-logo">
+          <h3>ArchaMap</h3>
+          <p>Supports archaeological category systems including artifact classes, site types, and period taxonomies.</p>
+          <a class="btn" href="https://catmapper.org/archamap" data-outbound="archamap">Open ArchaMap</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="api" class="section">
+      <h2>API</h2>
+      <p>Base URL: <a href="https://api.catmapper.org" data-outbound="api-base">https://api.catmapper.org</a></p>
+      <div class="cards api-grid">
+        <article class="card">
+          <h3>Docs</h3>
+          <p>Interactive API docs and endpoint reference.</p>
+          <a class="btn" href="https://api.catmapper.org/docs" data-outbound="api-docs">Open API Docs</a>
+        </article>
+        <article class="card">
+          <h3>Common Endpoints</h3>
+          <ul class="compact-list">
+            <li><code>/search</code></li>
+            <li><code>/CMID/{database}/{cmid}</code></li>
+            <li><code>/dataset</code></li>
+            <li><code>/allDatasets</code></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="catmapr" class="section">
+      <h2>CatMapR (R Package)</h2>
+      <div class="cards catmapr-grid">
+        <article class="card">
+          <img src="assets/catmapr-hex.png" alt="CatMapR hex logo" class="hex-logo">
+          <p>CatMapR is the official R wrapper for the CatMapper API.</p>
+          <pre><code>install.packages("remotes")
+remotes::install_github("ProjectCatMapper/CatMapR")</code></pre>
+          <div class="inline-links">
+            <a class="btn" href="https://projectcatmapper.github.io/CatMapR/" data-outbound="catmapr-docs">Documentation</a>
+            <a class="btn btn-ghost" href="https://github.com/ProjectCatMapper/CatMapR" data-outbound="catmapr-repo">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cite" class="section">
+      <h2>How To Cite</h2>
+      <p>Use dataset citation metadata when available in CatMapper datasets. For project-level citation guidance, contact <a href="mailto:support@catmapper.org">support@catmapper.org</a>.</p>
+      <p>Publications and formal citation text can be added here as the bibliography expands.</p>
+    </section>
+
+    <section id="team" class="section">
+      <h2>Team and Maintainers</h2>
+      <p>ProjectCatMapper is maintained by contributors across CatMapper repositories.</p>
+      <ul class="compact-list">
+        <li><a href="https://github.com/ProjectCatMapper" data-outbound="org">ProjectCatMapper Organization</a></li>
+        <li><a href="https://github.com/ProjectCatMapper/CatMapperAPI" data-outbound="api-repo">CatMapperAPI Repository</a></li>
+        <li><a href="https://github.com/ProjectCatMapper/CatMapperJS" data-outbound="js-repo">CatMapperJS Repository</a></li>
+        <li><a href="https://github.com/ProjectCatMapper/CatMapR" data-outbound="r-repo">CatMapR Repository</a></li>
+      </ul>
+    </section>
+
+    <section id="contribute" class="section">
+      <h2>Contribute</h2>
+      <p>Issues and pull requests are welcome.</p>
+      <div class="inline-links">
+        <a class="btn" href="https://github.com/ProjectCatMapper/projectcatmapper.github.io/issues/new/choose" data-outbound="issues">Open an Issue</a>
+        <a class="btn btn-ghost" href="https://github.com/ProjectCatMapper/projectcatmapper.github.io/pulls" data-outbound="prs">Open a Pull Request</a>
+      </div>
+      <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for workflow details and setup links.</p>
+    </section>
+
+    <section id="governance" class="section">
+      <h2>Trust and Governance</h2>
+      <div class="cards governance-grid">
+        <article class="card">
+          <h3>License and Terms</h3>
+          <p>This repository uses the same license model as its GitHub-hosted source. See <a href="LICENSE">LICENSE</a>.</p>
+        </article>
+        <article class="card">
+          <h3>Privacy and Data Handling</h3>
+          <p>Privacy and data handling guidance follows CatMapper documentation on <a href="https://catmapper.org" data-outbound="catmapper-org">catmapper.org</a>.</p>
+        </article>
+        <article class="card">
+          <h3>Stability Policies</h3>
+          <p>API and package stability expectations are documented in project repositories, including CatMapR API stability contracts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="feedback" class="section">
+      <h2>Feedback</h2>
+      <p>Questions, requests, and collaboration inquiries: <a href="mailto:support@catmapper.org">support@catmapper.org</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>ProjectCatMapper Docs Hub</p>
+    <p class="footer-links">
+      <a href="https://catmapper.org" data-outbound="footer-main">catmapper.org</a>
+      <a href="https://projectcatmapper.github.io/CatMapR/" data-outbound="footer-catmapr">CatMapR Docs</a>
+      <a href="https://api.catmapper.org/docs" data-outbound="footer-api">API Docs</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
