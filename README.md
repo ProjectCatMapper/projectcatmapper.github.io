@@ -11,7 +11,15 @@ One-page documentation hub for ProjectCatMapper.
 - CatMapper app links (SocioMap / ArchaMap)
 - API quick links
 - CatMapR package links and install snippet
+- CatMapPy package links, install snippet, and usage references
 - Contribution and governance references
+
+## Language Wrappers
+
+- **CatMapR (R)**: https://github.com/ProjectCatMapper/CatMapR
+- **CatMapPy (Python)**: https://github.com/ProjectCatMapper/CatMapPy
+
+CatMapPy is the Python port of the CatMapper API wrapper package from CatMapR.
 
 ## Deployment
 
