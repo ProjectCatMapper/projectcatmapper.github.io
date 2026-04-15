@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ProjectCatMapper Docs Hub</title>
-  <meta name="description" content="Central docs hub for CatMapper, SocioMap, ArchaMap, API resources, and the CatMapR package.">
+  <meta name="description" content="Central docs hub for CatMapper, SocioMap, ArchaMap, API resources, and CatMapR/CatMapPy wrappers.">
   <link rel="canonical" href="https://projectcatmapper.github.io/">
   <meta property="og:title" content="ProjectCatMapper Docs Hub">
-  <meta property="og:description" content="Find CatMapper apps, API docs, and CatMapR package resources in one place.">
+  <meta property="og:description" content="Find CatMapper apps, API docs, and CatMapR/CatMapPy package resources in one place.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://projectcatmapper.github.io/">
   <meta property="og:image" content="https://projectcatmapper.github.io/assets/catmapper-logo.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ProjectCatMapper Docs Hub">
-  <meta name="twitter:description" content="Find CatMapper apps, API docs, and CatMapR package resources in one place.">
+  <meta name="twitter:description" content="Find CatMapper apps, API docs, and CatMapR/CatMapPy package resources in one place.">
   <meta name="twitter:image" content="https://projectcatmapper.github.io/assets/catmapper-logo.webp">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/catmapper-logo.webp" type="image/webp">
@@ -67,6 +67,7 @@
       <a href="#apps">Apps</a>
       <a href="#api">API</a>
       <a href="#catmapr">CatMapR</a>
+      <a href="#catmappy">CatMapPy</a>
       <a href="#contribute">Contribute</a>
     </nav>
   </header>
@@ -78,7 +79,7 @@
       <p>
         CatMapper organizes and harmonizes category systems across datasets. It includes two web applications:
         SocioMap (social-science categories) and ArchaMap (archaeological categories), plus a public API and
-        an R wrapper package (CatMapR).
+        official wrapper packages for R (CatMapR) and Python (CatMapPy).
       </p>
       <div id="start-here" class="start-grid" aria-label="Start here actions">
         <a class="start-card" href="#apps">
@@ -95,6 +96,11 @@
           <span>3.</span>
           <strong>Work in R</strong>
           <small>Install CatMapR and follow vignettes</small>
+        </a>
+        <a class="start-card" href="#catmappy">
+          <span>4.</span>
+          <strong>Work in Python</strong>
+          <small>Install CatMapPy and call API wrapper functions</small>
         </a>
       </div>
     </section>
@@ -159,6 +165,26 @@ remotes::install_github("ProjectCatMapper/CatMapR")</code></pre>
       </div>
     </section>
 
+    <section id="catmappy" class="section">
+      <h2>CatMapPy (Python Package)</h2>
+      <div class="cards catmapr-grid">
+        <article class="card">
+          <p>CatMapPy is the Python port of the CatMapper API wrapper package from CatMapR.</p>
+          <pre><code>git clone https://github.com/ProjectCatMapper/CatMapPy.git
+cd CatMapPy
+pip install -e .</code></pre>
+          <pre><code>from catmappy import list_datasets, search_database
+
+datasets = list_datasets("SocioMap")
+hits = search_database(database="SocioMap", domain="ETHNICITY", term="Dan")</code></pre>
+          <p>Environment variables (intentionally shared with CatMapR for API compatibility): <code>CATMAPR_API_URL</code>, <code>CATMAPR_API_KEY</code>.</p>
+          <div class="inline-links">
+            <a class="btn btn-ghost" href="https://github.com/ProjectCatMapper/CatMapPy" data-outbound="catmappy-repo">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="cite" class="section">
       <h2>How To Cite</h2>
       <p>If you use CatMapper in a research project, please cite:</p>
@@ -182,6 +208,7 @@ remotes::install_github("ProjectCatMapper/CatMapR")</code></pre>
         <li><a href="https://api.catmapper.org/docs" data-outbound="api-public">CatMapper API Documentation</a></li>
         <li><a href="https://catmapper.org" data-outbound="web-public">CatMapper Web Application</a></li>
         <li><a href="https://github.com/ProjectCatMapper/CatMapR" data-outbound="r-repo">CatMapR Repository</a></li>
+        <li><a href="https://github.com/ProjectCatMapper/CatMapPy" data-outbound="py-repo">CatMapPy Repository</a></li>
       </ul>
     </section>
 
